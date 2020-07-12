@@ -23,3 +23,16 @@ a:active {
   cursor: pointer;
   display: inline-block;
 }
+html {
+  //this defines what 1rem is
+  font-size: 62.5%; // 62.5=10px/16px=>1rem=10px;
+}
+body {
+  font-family: var(--primary-font);
+  font-size: var(--primary-font-size);
+  line-height: 1.5;
+  font-weight: 700;
+}
+h1 {
+  font-size: inherit;
+}
