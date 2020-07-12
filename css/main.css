@@ -31,7 +31,7 @@ a,
 a:link,
 a:active {
   text-decoration: none;
-  background: none;
+  background-color: none;
   border: none;
   cursor: pointer;
   display: inline-block;
@@ -50,5 +50,31 @@ body {
 
 h1 {
   font-size: inherit;
+}
+
+.hamburger-btn {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.hamburger-btn, .hamburger-btn::before, .hamburger-btn::after {
+  width: 4rem;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+}
+
+.hamburger-btn::before, .hamburger-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger-btn::before {
+  top: -1rem;
+}
+
+.hamburger-btn::after {
+  top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
