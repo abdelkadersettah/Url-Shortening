@@ -31,7 +31,6 @@ a,
 a:link,
 a:active {
   text-decoration: none;
-  background-color: none;
   border: none;
   cursor: pointer;
   display: inline-block;
@@ -53,28 +52,48 @@ h1 {
 }
 
 .hamburger-btn {
+  background: none;
+}
+
+.hamburger-btn__link {
   position: relative;
   margin-top: 2rem;
 }
 
-.hamburger-btn, .hamburger-btn::before, .hamburger-btn::after {
+.hamburger-btn__link, .hamburger-btn__link::before, .hamburger-btn__link::after {
   width: 4rem;
   height: 2px;
+  cursor: pointer;
   background-color: black;
   display: inline-block;
+  transition: transform 0.2s, background-color 0.1s;
 }
 
-.hamburger-btn::before, .hamburger-btn::after {
+.hamburger-btn__link::before, .hamburger-btn__link::after {
   content: '';
   position: absolute;
   left: 0;
 }
 
-.hamburger-btn::before {
+.hamburger-btn__link::before {
   top: -1rem;
 }
 
-.hamburger-btn::after {
+.hamburger-btn__link::after {
   top: 1rem;
+}
+
+.hamburger-btn:hover .hamburger-btn__link {
+  background-color: transparent;
+}
+
+.hamburger-btn:hover .hamburger-btn__link::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.hamburger-btn:hover .hamburger-btn__link::after {
+  top: 0;
+  transform: rotate(-135deg);
 }
 /*# sourceMappingURL=main.css.map */

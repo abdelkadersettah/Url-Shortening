@@ -1,26 +1,40 @@
 .hamburger-btn {
-  position: relative;
-
-  margin-top: 2rem;
-
-  &,
-  &::before,
-  &::after {
-    width: 4rem;
-    height: 2px;
-    background-color: black;
-    display: inline-block;
+  background: none;
+  &__link {
+    position: relative;
+    margin-top: 2rem;
+    &,
+    &::before,
+    &::after {
+      width: 4rem;
+      height: 2px;
+      cursor: pointer;
+      background-color: black;
+      display: inline-block;
+      transition: transform 0.2s, background-color 0.1s;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
   }
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
+  &:hover &__link {
+    background-color: transparent;
   }
-  &::before {
-    top: -1rem;
+  &:hover &__link::before {
+    top: 0;
+    transform: rotate(135deg);
   }
-  &::after {
-    top: 1rem;
+  &:hover &__link::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
