@@ -53,17 +53,23 @@ h1 {
 
 .hamburger-btn {
   background: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: 4px solid transparent;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hamburger-btn__link {
   position: relative;
-  margin-top: 2rem;
 }
 
 .hamburger-btn__link, .hamburger-btn__link::before, .hamburger-btn__link::after {
   width: 4rem;
   height: 2px;
-  cursor: pointer;
   background-color: black;
   display: inline-block;
   transition: transform 0.2s, background-color 0.1s;
@@ -83,16 +89,16 @@ h1 {
   top: 1rem;
 }
 
-.hamburger-btn:hover .hamburger-btn__link {
+.is-open {
   background-color: transparent;
 }
 
-.hamburger-btn:hover .hamburger-btn__link::before {
+.is-open::before {
   top: 0;
   transform: rotate(135deg);
 }
 
-.hamburger-btn:hover .hamburger-btn__link::after {
+.is-open::after {
   top: 0;
   transform: rotate(-135deg);
 }

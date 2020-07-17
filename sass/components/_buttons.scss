@@ -1,14 +1,21 @@
 .hamburger-btn {
   background: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  outline: none;
+  // border to increase the click area
+  border: 4px solid transparent;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__link {
     position: relative;
-    margin-top: 2rem;
     &,
     &::before,
     &::after {
       width: 4rem;
       height: 2px;
-      cursor: pointer;
       background-color: black;
       display: inline-block;
       transition: transform 0.2s, background-color 0.1s;
@@ -26,14 +33,15 @@
       top: 1rem;
     }
   }
-  &:hover &__link {
-    background-color: transparent;
-  }
-  &:hover &__link::before {
+}
+
+.is-open {
+  background-color: transparent;
+  &::before {
     top: 0;
     transform: rotate(135deg);
   }
-  &:hover &__link::after {
+  &::after {
     top: 0;
     transform: rotate(-135deg);
   }
