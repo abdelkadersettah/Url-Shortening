@@ -8,6 +8,12 @@
   --tertiary-color-very-dark-violet: hsl(260, 8%, 14%);
   --primary-font: 'Poppins', sans-serif;
   --primary-font-size: 1.8rem;
+  --page-padding: 3rem;
+  --padding-small: 2rem;
+  --padding-medium: 3rem;
+  --margin-small: 2rem;
+  --margin-medium: 3rem;
+  --margin-large: 6rem;
 }
 
 :root {
@@ -49,6 +55,11 @@ body {
 
 h1 {
   font-size: inherit;
+}
+
+.header {
+  padding: 0 var(--page-padding);
+  margin-top: var(--margin-medium);
 }
 
 .hamburger-btn {
@@ -101,5 +112,42 @@ h1 {
 .is-open::after {
   top: 0;
   transform: rotate(-135deg);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn--primary {
+  background-color: var(--primary-color-cyan);
+  border-radius: 32px;
+  padding: 0.8rem 2.5rem;
+}
+
+.main-nav {
+  background-color: var(--primary-color-dark-violet);
+  border-radius: 0.9rem;
+  text-align: center;
+  padding: 0 var(--padding-small);
+}
+
+.main-nav__link {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+.main-nav__primary {
+  padding: var(--padding-medium) 0;
+}
+
+.main-nav__primary--cta {
+  border-top: 1px solid rgba(250, 250, 250, 0.1);
+}
+
+.main-nav__list:not(:first-child) {
+  margin-top: var(--margin-medium);
 }
 /*# sourceMappingURL=main.css.map */

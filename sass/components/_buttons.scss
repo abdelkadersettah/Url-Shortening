@@ -46,3 +46,16 @@
     transform: rotate(-135deg);
   }
 }
+
+// button styles
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+
+  &--primary {
+    background-color: var(--primary-color-cyan);
+    border-radius: 32px;
+    padding: 0.8rem 2.5rem;
+  }
+}
