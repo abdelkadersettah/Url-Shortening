@@ -1,4 +1,13 @@
 .header {
-  padding: 0 var(--page-padding);
-  margin-top: var(--margin-medium);
+  padding: var(--padding-medium) var(--page-padding);
+  // margin-top: var(--margin-medium);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    &--img {
+      vertical-align: middle;
+    }
+  }
 }

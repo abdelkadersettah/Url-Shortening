@@ -3,6 +3,12 @@
   border-radius: 0.9rem;
   text-align: center;
   padding: 0 var(--padding-small);
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  right: 10%;
+  top: 100%;
+  display: none;
   &__link {
     color: #fff;
     font-size: 1.8rem;
