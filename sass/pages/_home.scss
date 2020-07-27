@@ -11,3 +11,23 @@
     }
   }
 }
+.hero {
+  margin-bottom: var(--margin-x-large);
+  &__media {
+    margin-bottom: var(--margin-large);
+    overflow: hidden;
+  }
+  &__image {
+    display: inline-block;
+    padding-left: var(--page-padding);
+
+    img {
+      display: inline-block;
+      width: 140%;
+    }
+  }
+  &__inner {
+    text-align: center;
+    padding: 0 var(--page-padding);
+  }
+}
