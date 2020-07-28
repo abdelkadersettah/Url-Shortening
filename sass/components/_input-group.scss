@@ -20,5 +20,19 @@
     font-size: 1.8rem;
     outline: none;
     margin-bottom: var(--margin-medium);
+    &--not-valid {
+      border: 4px solid var(--secondary-color-Red);
+      &::placeholder {
+        color: var(--secondary-color-Red);
+      }
+    }
+    &--error {
+      color: var(--secondary-color-Red);
+      font-size: 1.3rem;
+      font-weight: 500;
+      font-style: italic;
+      transform: translateY(-80%) translateX(-85%);
+      display: none;
+    }
   }
 }
