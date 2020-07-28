@@ -12,7 +12,7 @@
   }
 }
 .hero {
-  margin-bottom: var(--margin-x-large);
+  margin-bottom: calc(var(--margin-x-large) * 2);
   &__media {
     margin-bottom: var(--margin-large);
     overflow: hidden;
@@ -30,4 +30,9 @@
     text-align: center;
     padding: 0 var(--page-padding);
   }
+}
+.features {
+  background-color: var(--tertiary-color-gray);
+  //just for testing
+  height: 200px;
 }

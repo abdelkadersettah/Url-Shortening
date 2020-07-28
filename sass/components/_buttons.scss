@@ -53,15 +53,19 @@
   cursor: pointer;
   display: inline-block;
   outline: none;
+  border: none;
   font-size: 1.8rem;
   font-weight: 700;
-
   color: #fff;
+  background-color: var(--primary-color-cyan);
 
   &--primary {
-    background-color: var(--primary-color-cyan);
-    border-radius: 32px;
     padding: 0.8em 1.6em;
+    border-radius: 1.8em;
+  }
+  &--secondary {
+    padding: 0.6em 1.6em;
+    border-radius: 0.3em;
   }
   &:hover,
   &:active {
