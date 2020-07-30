@@ -1,0 +1,44 @@
+.output-group {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -15%;
+
+  &__list {
+    background-color: #fff;
+    outline: none;
+    width: 90%;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      margin-top: var(--margin-medium);
+    }
+  }
+  &__item {
+    color: var(--primary-color-cyan);
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 100%;
+    padding: var(--padding-small) 1em;
+
+    &:first-child {
+      border-bottom: 1px solid var(--tertiary-color-gray);
+      color: var(--primary-color-dark-violet);
+    }
+  }
+  &__cta {
+    margin: 0 1em;
+    margin-bottom: var(--margin-medium);
+    font-size: 1.6rem;
+    &--copied {
+      background-color: var(--primary-color-dark-violet);
+      &:hover {
+        // remove hover effect from button component
+        filter: contrast(1);
+      }
+    }
+  }
+}

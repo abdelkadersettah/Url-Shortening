@@ -109,7 +109,6 @@ h1 {
 
 .features {
   background-color: var(--tertiary-color-gray);
-  height: 200px;
 }
 
 .hamburger-btn {
@@ -168,6 +167,7 @@ h1 {
   display: inline-block;
   outline: none;
   border: none;
+  text-align: center;
   font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
@@ -260,5 +260,53 @@ h1 {
   font-style: italic;
   transform: translateY(-80%) translateX(-85%);
   display: none;
+}
+
+.output-group {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -15%;
+}
+
+.output-group__list {
+  background-color: #fff;
+  outline: none;
+  width: 90%;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-group__list:not(:first-child) {
+  margin-top: var(--margin-medium);
+}
+
+.output-group__item {
+  color: var(--primary-color-cyan);
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 100%;
+  padding: var(--padding-small) 1em;
+}
+
+.output-group__item:first-child {
+  border-bottom: 1px solid var(--tertiary-color-gray);
+  color: var(--primary-color-dark-violet);
+}
+
+.output-group__cta {
+  margin: 0 1em;
+  margin-bottom: var(--margin-medium);
+  font-size: 1.6rem;
+}
+
+.output-group__cta--copied {
+  background-color: var(--primary-color-dark-violet);
+}
+
+.output-group__cta--copied:hover {
+  filter: contrast(1);
 }
 /*# sourceMappingURL=main.css.map */
