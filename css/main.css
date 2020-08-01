@@ -3,7 +3,7 @@
   --primary-color-dark-violet: hsl(257, 27%, 26%);
   --secondary-color-Red: hsl(0, 87%, 67%);
   --tertiary-color-gray: hsl(0, 0%, 75%);
-  --tertiary-color-light-gray: hsla(0, 0%, 95%);
+  --tertiary-color-light-gray: hsla(0, 0%, 90%);
   --tertiary-color-grayish-violet: hsl(257, 7%, 63%);
   --tertiary-color-very-dark-blue: hsl(255, 11%, 22%);
   --tertiary-color-very-dark-violet: hsl(260, 8%, 14%);
@@ -124,6 +124,7 @@ h1 {
 .features {
   background-color: var(--tertiary-color-light-gray);
   text-align: center;
+  padding-bottom: 4em;
 }
 
 .features__statistic {
