@@ -3,6 +3,7 @@
   --primary-color-dark-violet: hsl(257, 27%, 26%);
   --secondary-color-Red: hsl(0, 87%, 67%);
   --tertiary-color-gray: hsl(0, 0%, 75%);
+  --tertiary-color-light-gray: hsla(0, 0%, 95%);
   --tertiary-color-grayish-violet: hsl(257, 7%, 63%);
   --tertiary-color-very-dark-blue: hsl(255, 11%, 22%);
   --tertiary-color-very-dark-violet: hsl(260, 8%, 14%);
@@ -11,6 +12,7 @@
   --page-padding: 3rem;
   --padding-small: 1rem;
   --padding-medium: 2rem;
+  --padding-large: 4rem;
   --margin-small: 1rem;
   --margin-medium: 2rem;
   --margin-large: 4rem;
@@ -51,7 +53,7 @@ body {
   font-family: var(--primary-font);
   font-size: var(--primary-font-size);
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h1 {
@@ -69,6 +71,18 @@ h1 {
   font-weight: 500;
   color: var(--tertiary-color-grayish-violet);
   margin-bottom: var(--margin-large);
+}
+
+.title-secondary {
+  font-size: 2.5rem;
+  color: var(--tertiary-color-very-dark-blue);
+}
+
+.text-secondary {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--tertiary-color-grayish-violet);
+  margin-top: var(--margin-medium);
 }
 
 .header {
@@ -108,7 +122,17 @@ h1 {
 }
 
 .features {
-  background-color: var(--tertiary-color-gray);
+  background-color: var(--tertiary-color-light-gray);
+  text-align: center;
+}
+
+.features__statistic {
+  margin-top: var(--margin-x-large);
+  padding: var(--padding-medium) var(--page-padding);
+}
+
+.features__title {
+  margin-bottom: calc(var(--margin-medium) * 4);
 }
 
 .hamburger-btn {
@@ -308,5 +332,47 @@ h1 {
 
 .output-group__cta--copied:hover {
   filter: contrast(1);
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.4em;
+  padding: 2em 1.5em;
+  position: relative;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 4em;
+}
+
+.card:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 4em;
+  background-color: var(--primary-color-cyan);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(100%);
+}
+
+.card__figure {
+  background-color: var(--primary-color-dark-violet);
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0.8em;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.card__img {
+  display: flex;
+}
+
+.card__title {
+  font-size: 2.2rem;
+  margin-top: 1em;
 }
 /*# sourceMappingURL=main.css.map */

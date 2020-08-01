@@ -1,0 +1,36 @@
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.4em;
+  padding: 2em 1.5em;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 4em;
+    &::after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 4em;
+      background-color: var(--primary-color-cyan);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateY(100%);
+    }
+  }
+  &__figure {
+    background-color: var(--primary-color-dark-violet);
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0.8em;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  &__img {
+    display: flex;
+  }
+  &__title {
+    font-size: 2.2rem;
+    margin-top: 1em;
+  }
+}

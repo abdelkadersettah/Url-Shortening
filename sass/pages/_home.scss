@@ -32,5 +32,15 @@
   }
 }
 .features {
-  background-color: var(--tertiary-color-gray);
+  background-color: var(--tertiary-color-light-gray);
+  text-align: center;
+  &__statistic {
+    margin-top: var(--margin-x-large);
+    padding: var(--padding-medium) var(--page-padding);
+  }
+  &__title {
+    margin-bottom: calc(var(--margin-medium) * 4);
+  }
+  &__cards {
+  }
 }
