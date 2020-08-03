@@ -33,6 +33,35 @@ inputBtn.addEventListener('click', (e) => {
 
 //get shorten link
 
+//  XMLHttpRequest method
+// function postRequest() {
+//   return new Promise((resolve, reject) => {
+//     var http = new XMLHttpRequest();
+//     var url = 'https://rel.ink/api/links/';
+//     var params = {
+//       url: 'https://www.google.com/',
+//     };
+
+//     http.open('POST', url);
+
+//     //Send the proper header information along with the request
+//     http.setRequestHeader('Content-type', 'application/json');
+
+//     http.onload = function () {
+//       //Call a function when the state changes.
+//       if (http.readyState === 4) {
+//         resolve(JSON.parse(http.responseText));
+//       } else {
+//         reject(Error, 'cant get data');
+//       }
+//     };
+//     http.send(JSON.stringify(params));
+//   })
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err));
+// }
+// postRequest();
+
 function postLink(input) {
   return fetch('https://rel.ink/api/links/', {
     method: 'POST',
