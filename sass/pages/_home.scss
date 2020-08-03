@@ -34,7 +34,7 @@
 .features {
   background-color: var(--tertiary-color-light-gray);
   text-align: center;
-  padding-bottom: 4em;
+  padding-bottom: 3em;
   &__statistic {
     margin-top: var(--margin-x-large);
     padding: var(--padding-medium) var(--page-padding);
@@ -42,6 +42,15 @@
   &__title {
     margin-bottom: calc(var(--margin-medium) * 4);
   }
-  &__cards {
-  }
+}
+.boost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color-dark-violet) url(/images/bg-boost-mobile.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 14em;
 }
