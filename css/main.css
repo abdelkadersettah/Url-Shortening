@@ -143,6 +143,7 @@ h1 {
 }
 
 .boost {
+  padding: 0 var(--page-padding);
   display: flex;
   flex-direction: column;
   justify-content: center;
