@@ -18,6 +18,7 @@
     &:hover,
     &:active {
       fill: var(--primary-color-cyan);
+      transform: scale(1.2);
     }
   }
 }

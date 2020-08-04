@@ -453,5 +453,6 @@ h1 {
 
 .social-nav__icon:hover, .social-nav__icon:active {
   fill: var(--primary-color-cyan);
+  transform: scale(1.2);
 }
 /*# sourceMappingURL=main.css.map */
