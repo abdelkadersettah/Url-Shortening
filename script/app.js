@@ -18,7 +18,6 @@ document.addEventListener('click', (e) => {
   const mainNav = document.querySelector('.main-nav');
   let classNameArr = e.target.className.split('__');
   if (btnClassName.contains('is-open')) {
-    console.log('great');
     if (
       !classNameArr.includes('main-nav') &&
       !classNameArr.includes('hamburger-btn')
