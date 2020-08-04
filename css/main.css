@@ -13,6 +13,7 @@
   --padding-small: 1rem;
   --padding-medium: 2rem;
   --padding-large: 4rem;
+  --padding-x-large: 6rem;
   --margin-small: 1rem;
   --margin-medium: 2rem;
   --margin-large: 4rem;
@@ -149,10 +150,19 @@ h1 {
   justify-content: center;
   align-items: center;
   background: var(--primary-color-dark-violet) url(/images/bg-boost-mobile.svg);
-  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 14em;
+  height: 17em;
+}
+
+.footer {
+  background-color: var(--tertiary-color-very-dark-violet);
+  text-align: center;
+  padding: var(--padding-x-large) var(--page-padding);
+}
+
+.footer__logo {
+  margin-bottom: var(--margin-large);
 }
 
 .hamburger-btn {
@@ -216,6 +226,7 @@ h1 {
   font-weight: 700;
   color: #fff;
   background-color: var(--primary-color-cyan);
+  transition: all 0.2s;
 }
 
 .btn--primary {
@@ -394,5 +405,53 @@ h1 {
 .card__title {
   font-size: 2.2rem;
   margin-top: 1em;
+}
+
+.footer-nav__list {
+  margin-bottom: var(--margin-large);
+}
+
+.footer-nav__item {
+  margin-bottom: 0.3em;
+}
+
+.footer-nav__item:first-child {
+  margin-bottom: 0.6em;
+}
+
+.footer-nav__link {
+  color: var(--tertiary-color-gray);
+  font-size: 1.3rem;
+  transition: all 0.2s;
+}
+
+.footer-nav__link--title {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.footer-nav__link:hover, .footer-nav__link:active {
+  color: var(--primary-color-cyan);
+}
+
+.social-nav__list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-nav__item:not(:last-child) {
+  margin-right: var(--margin-medium);
+}
+
+.social-nav__icon {
+  fill: #fff;
+  height: 24px;
+  width: 24px;
+  transition: all 0.2s;
+}
+
+.social-nav__icon:hover, .social-nav__icon:active {
+  fill: var(--primary-color-cyan);
 }
 /*# sourceMappingURL=main.css.map */

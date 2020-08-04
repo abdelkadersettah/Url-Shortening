@@ -13,6 +13,23 @@ hamburgerBtn.addEventListener('click', (e) => {
   }
 });
 
+document.addEventListener('click', (e) => {
+  const btnClassName = hamburgerBtn.firstElementChild.classList;
+  const mainNav = document.querySelector('.main-nav');
+  let classNameArr = e.target.className.split('__');
+
+  if (btnClassName.contains('is-open')) {
+    console.log('great');
+    if (
+      !classNameArr.includes('main-nav') &&
+      !classNameArr.includes('hamburger-btn')
+    ) {
+      mainNav.style.display = 'none';
+      btnClassName.remove('is-open');
+    }
+  }
+});
+
 // add class to input if the user don't write the url
 const inputBtn = document.querySelector('.input-group__submit');
 inputBtn.addEventListener('click', (e) => {

@@ -1,0 +1,25 @@
+.footer-nav {
+  &__list {
+    margin-bottom: var(--margin-large);
+  }
+  &__item {
+    margin-bottom: 0.3em;
+    &:first-child {
+      margin-bottom: 0.6em;
+    }
+  }
+  &__link {
+    color: var(--tertiary-color-gray);
+    font-size: 1.3rem;
+    transition: all 0.2s;
+    &--title {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    &:hover,
+    &:active {
+      color: var(--primary-color-cyan);
+    }
+  }
+}

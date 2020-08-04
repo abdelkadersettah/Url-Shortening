@@ -1,0 +1,23 @@
+.social-nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: var(--margin-medium);
+    }
+  }
+  &__link {
+  }
+  &__icon {
+    fill: #fff;
+    height: 24px;
+    width: 24px;
+    transition: all 0.2s;
+    &:hover,
+    &:active {
+      fill: var(--primary-color-cyan);
+    }
+  }
+}
