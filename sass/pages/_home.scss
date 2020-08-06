@@ -1,6 +1,6 @@
 .header {
   padding: var(--padding-medium) var(--page-padding);
-  // margin-top: var(--margin-medium);
+  margin-top: var(--margin-medium);
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -13,6 +13,13 @@
 }
 .hero {
   margin-bottom: calc(var(--margin-x-large) * 2);
+  // @include respond(tab-land) {
+  //   display: flex;
+  //   margin-top: var(--margin-large);
+  //   overflow-x: hidden;
+  //   height: 20em;
+  // }
+
   &__media {
     margin-bottom: var(--margin-large);
     overflow: hidden;
@@ -23,7 +30,7 @@
 
     img {
       display: inline-block;
-      width: 140%;
+      width: 150%;
     }
   }
   &__inner {
@@ -52,7 +59,13 @@
   background: var(--primary-color-dark-violet) url(/images/bg-boost-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 17em;
+  height: 16em;
+  @include respond(tab-port) {
+    background: var(--primary-color-dark-violet)
+      url(/images/bg-boost-desktop.svg);
+    background-repeat: no-repeat;
+    height: 11em;
+  }
 }
 .footer {
   background-color: var(--tertiary-color-very-dark-violet);

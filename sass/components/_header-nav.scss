@@ -4,9 +4,9 @@
   text-align: center;
   padding: 0 var(--padding-small);
   position: absolute;
-  width: 80%;
-  left: 10%;
-  right: 10%;
+  width: calc(100% - (var(--page-padding) * 2));
+  left: var(--page-padding);
+  right: var(--page-padding);
   top: 100%;
   display: none;
   &__link {

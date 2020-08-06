@@ -20,6 +20,20 @@
   --margin-x-large: 6rem;
 }
 
+/* 0-700px phone
+  700 - 900px tablet portrait
+  900 - 1200 px tablet landscape
+  1200 - 1800 px desktop
+  1080 +++  big desktop
+
+ORDER : base + typography > general layout + grid > page layout > components
+
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
 :root {
   box-sizing: border-box;
 }
@@ -48,6 +62,12 @@ a:active {
 
 html {
   font-size: 62.5%;
+}
+
+@media only screen and (min-width: 37.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -94,6 +114,7 @@ h1 {
 
 .header {
   padding: var(--padding-medium) var(--page-padding);
+  margin-top: var(--margin-medium);
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -120,7 +141,7 @@ h1 {
 
 .hero__image img {
   display: inline-block;
-  width: 140%;
+  width: 150%;
 }
 
 .hero__inner {
@@ -152,7 +173,15 @@ h1 {
   background: var(--primary-color-dark-violet) url(/images/bg-boost-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 17em;
+  height: 16em;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .boost {
+    background: var(--primary-color-dark-violet) url(/images/bg-boost-desktop.svg);
+    background-repeat: no-repeat;
+    height: 11em;
+  }
 }
 
 .footer {
@@ -249,9 +278,9 @@ h1 {
   text-align: center;
   padding: 0 var(--padding-small);
   position: absolute;
-  width: 80%;
-  left: 10%;
-  right: 10%;
+  width: calc(100% - (var(--page-padding) * 2));
+  left: var(--page-padding);
+  right: var(--page-padding);
   top: 100%;
   display: none;
 }
@@ -322,7 +351,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -15%;
+  margin-top: calc(-0.9 * var(--margin-x-large));
 }
 
 .output-group__list {
