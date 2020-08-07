@@ -41,7 +41,10 @@ inputBtn.addEventListener('click', (e) => {
     input.classList.remove('input-group__input--not-valid');
     errorMsg.style.display = 'none';
     const shortenLink = fetchNewLink(input.value);
-    shortenLink.then((data) => renderShortLink(data));
+    shortenLink.then((data) => {
+      renderShortLink(data);
+      copyLink();
+    });
     input.value = '';
   }
 });
@@ -99,7 +102,25 @@ function renderShortLink(data) {
   <ul class="output-group__list">
       <li class="output-group__item">${data.url}</li>
       <li class="output-group__item">https://rel.ink/${data.hashid}</li>
-      <li class="output-group__cta output-group__cta--copied btn btn--secondary">copy</li>
+      <li class="output-group__cta btn btn--secondary">copy</li>
   </ul> 
     `;
+}
+
+// copy the clicked short link
+function copyLink() {
+  const copyBtn = document.querySelector('.output-group__cta');
+  copyBtn.addEventListener('click', (e) => {
+    copyBtn.classList.toggle('output-group__cta--copied');
+    copyBtn.textContent = 'Copied!';
+    var range = document.createRange();
+    var elementClicked = copyBtn.previousElementSibling;
+    range.selectNodeContents(elementClicked);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    console.log('clicked');
+    sel.removeAllRanges();
+  });
 }
