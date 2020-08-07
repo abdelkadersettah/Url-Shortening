@@ -19,8 +19,7 @@
   @include respond(tab-land) {
     display: flex;
     margin-top: var(--margin-medium);
-    overflow-x: hidden;
-    height: 20em;
+    overflow: hidden;
     padding-bottom: var(--padding-medium);
   }
 
