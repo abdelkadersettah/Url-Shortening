@@ -359,6 +359,11 @@ h1 {
   .main-nav__link {
     color: var(--tertiary-color-gray);
     font-size: 1.6rem;
+    transition: all 0.2s;
+  }
+  .main-nav__link:hover {
+    color: var(--tertiary-color-very-dark-violet);
+    font-weight: 700;
   }
 }
 
