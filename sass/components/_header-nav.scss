@@ -9,21 +9,51 @@
   right: var(--page-padding);
   top: 100%;
   display: none;
+  @include respond(tab-land) {
+    position: static;
+    background-color: transparent;
+    display: flex;
+  }
   &__link {
     color: #fff;
     font-size: 1.8rem;
     font-weight: 500;
     width: 100%;
+    @include respond(tab-land) {
+      color: var(--tertiary-color-gray);
+      font-size: 1.6rem;
+    }
+  }
+  &__btn {
+    width: 100%;
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
   }
   &__primary {
     padding: var(--padding-medium) 0;
+    @include respond(tab-land) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: var(--margin-medium);
+    }
     &--cta {
       border-top: 1px solid rgba(250, 250, 250, 0.1);
+      @include respond(tab-land) {
+        margin-left: auto;
+      }
     }
   }
   &__list {
     &:not(:first-child) {
       margin-top: var(--margin-medium);
+      @include respond(tab-land) {
+        margin-top: 0;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: var(--margin-medium);
     }
   }
 }

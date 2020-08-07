@@ -9,6 +9,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include respond(tab-land) {
+    display: none;
+  }
   &__link {
     position: relative;
     &,

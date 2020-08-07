@@ -1,10 +1,13 @@
 .header {
   padding: var(--padding-medium) var(--page-padding);
-  margin-top: var(--margin-medium);
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include respond(tab-land) {
+    padding: 0 var(--page-padding);
+  }
+
   &__logo {
     &--img {
       vertical-align: middle;
