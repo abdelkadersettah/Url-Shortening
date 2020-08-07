@@ -13,29 +13,44 @@
 }
 .hero {
   margin-bottom: calc(var(--margin-x-large) * 2);
-  // @include respond(tab-land) {
-  //   display: flex;
-  //   margin-top: var(--margin-large);
-  //   overflow-x: hidden;
-  //   height: 20em;
-  // }
+  @include respond(tab-land) {
+    display: flex;
+    margin-top: var(--margin-medium);
+    overflow-x: hidden;
+    height: 20em;
+    padding-bottom: var(--padding-medium);
+  }
 
   &__media {
     margin-bottom: var(--margin-large);
     overflow: hidden;
+    @include respond(tab-land) {
+      overflow: visible;
+      order: 2;
+      margin-bottom: 0;
+    }
   }
   &__image {
     display: inline-block;
     padding-left: var(--page-padding);
-
+    @include respond(tab-land) {
+      padding-left: 0;
+    }
     img {
       display: inline-block;
       width: 150%;
+      @include respond(tab-land) {
+        width: 120%;
+      }
     }
   }
   &__inner {
     text-align: center;
     padding: 0 var(--page-padding);
+    @include respond(tab-land) {
+      text-align: left;
+      align-self: center;
+    }
   }
 }
 .features {
@@ -45,6 +60,9 @@
   &__statistic {
     margin-top: var(--margin-x-large);
     padding: var(--padding-medium) var(--page-padding);
+    @include respond(tab-land) {
+      margin-top: var(--margin-medium);
+    }
   }
   &__title {
     margin-bottom: calc(var(--margin-medium) * 4);

@@ -1,3 +1,17 @@
+/* 0-700px phone
+  700 - 900px tablet portrait
+  900 - 1200 px tablet landscape
+  1200 - 1800 px desktop
+  1080 +++  big desktop
+
+ORDER : base + typography > general layout + grid > page layout > components
+
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
 :root {
   --primary-color-cyan: hsl(180, 66%, 49%);
   --primary-color-dark-violet: hsl(257, 27%, 26%);
@@ -20,20 +34,12 @@
   --margin-x-large: 6rem;
 }
 
-/* 0-700px phone
-  700 - 900px tablet portrait
-  900 - 1200 px tablet landscape
-  1200 - 1800 px desktop
-  1080 +++  big desktop
+@media only screen and (min-width: 56.25em) {
+  :root {
+    --page-padding: 5rem;
+  }
+}
 
-ORDER : base + typography > general layout + grid > page layout > components
-
-$breakpoint argument choices:
--phone
--tab-port
--tab-land
--big-desktop
-*/
 :root {
   box-sizing: border-box;
 }
@@ -64,12 +70,6 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (min-width: 37.5em) {
-  html {
-    font-size: 75%;
-  }
-}
-
 body {
   font-family: var(--primary-font);
   font-size: var(--primary-font-size);
@@ -92,6 +92,7 @@ h1 {
   font-weight: 500;
   color: var(--tertiary-color-grayish-violet);
   margin-bottom: var(--margin-large);
+  font-size: 1.6rem;
 }
 
 .title-secondary {
@@ -129,9 +130,27 @@ h1 {
   margin-bottom: calc(var(--margin-x-large) * 2);
 }
 
+@media only screen and (min-width: 56.25em) {
+  .hero {
+    display: flex;
+    margin-top: var(--margin-medium);
+    overflow-x: hidden;
+    height: 20em;
+    padding-bottom: var(--padding-medium);
+  }
+}
+
 .hero__media {
   margin-bottom: var(--margin-large);
   overflow: hidden;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .hero__media {
+    overflow: visible;
+    order: 2;
+    margin-bottom: 0;
+  }
 }
 
 .hero__image {
@@ -139,14 +158,33 @@ h1 {
   padding-left: var(--page-padding);
 }
 
+@media only screen and (min-width: 56.25em) {
+  .hero__image {
+    padding-left: 0;
+  }
+}
+
 .hero__image img {
   display: inline-block;
   width: 150%;
 }
 
+@media only screen and (min-width: 56.25em) {
+  .hero__image img {
+    width: 120%;
+  }
+}
+
 .hero__inner {
   text-align: center;
   padding: 0 var(--page-padding);
+}
+
+@media only screen and (min-width: 56.25em) {
+  .hero__inner {
+    text-align: left;
+    align-self: center;
+  }
 }
 
 .features {
@@ -158,6 +196,12 @@ h1 {
 .features__statistic {
   margin-top: var(--margin-x-large);
   padding: var(--padding-medium) var(--page-padding);
+}
+
+@media only screen and (min-width: 56.25em) {
+  .features__statistic {
+    margin-top: var(--margin-medium);
+  }
 }
 
 .features__title {
