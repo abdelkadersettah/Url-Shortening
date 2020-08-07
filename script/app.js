@@ -113,14 +113,19 @@ function copyLink() {
   copyBtn.addEventListener('click', (e) => {
     copyBtn.classList.toggle('output-group__cta--copied');
     copyBtn.textContent = 'Copied!';
+
+    // create select range
     var range = document.createRange();
-    var elementClicked = copyBtn.previousElementSibling;
-    range.selectNodeContents(elementClicked);
+    // link that got copy
+    var linkClicked = copyBtn.previousElementSibling;
+    // select url clicked
+    range.selectNodeContents(linkClicked);
+    // get selection
     var sel = window.getSelection();
     sel.removeAllRanges();
     sel.addRange(range);
     document.execCommand('copy');
-    console.log('clicked');
+    // remove selection
     sel.removeAllRanges();
   });
 }
