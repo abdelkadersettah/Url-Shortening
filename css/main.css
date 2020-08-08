@@ -34,7 +34,7 @@ $breakpoint argument choices:
   --margin-x-large: 6rem;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   :root {
     --page-padding: 5rem;
   }
@@ -121,7 +121,7 @@ h1 {
   align-items: center;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .header {
     padding: 0 var(--page-padding);
   }
@@ -135,7 +135,7 @@ h1 {
   margin-bottom: calc(var(--margin-x-large) * 2);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 43.75em) {
   .hero {
     display: flex;
     margin-top: var(--margin-medium);
@@ -149,7 +149,7 @@ h1 {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 43.75em) {
   .hero__media {
     overflow: visible;
     order: 2;
@@ -162,7 +162,7 @@ h1 {
   padding-left: var(--page-padding);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 43.75em) {
   .hero__image {
     padding-left: 0;
   }
@@ -170,10 +170,10 @@ h1 {
 
 .hero__image img {
   display: inline-block;
-  width: 150%;
+  width: 120%;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 43.75em) {
   .hero__image img {
     width: 120%;
   }
@@ -184,7 +184,7 @@ h1 {
   padding: 0 var(--page-padding);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 43.75em) {
   .hero__inner {
     text-align: left;
     align-self: center;
@@ -202,7 +202,7 @@ h1 {
   padding: var(--padding-medium) var(--page-padding);
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .features__statistic {
     margin-top: var(--margin-medium);
   }
@@ -212,7 +212,7 @@ h1 {
   margin-bottom: calc(var(--margin-medium) * 4);
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .features__title {
     max-width: 60%;
     margin: 0 auto;
@@ -232,7 +232,7 @@ h1 {
   height: 16em;
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .boost {
     background: var(--primary-color-dark-violet) url(/images/bg-boost-desktop.svg);
     background-repeat: no-repeat;
@@ -261,7 +261,7 @@ h1 {
   align-items: center;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .hamburger-btn {
     display: none;
   }
@@ -347,7 +347,7 @@ h1 {
   display: none;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .main-nav {
     position: static;
     background-color: transparent;
@@ -362,7 +362,7 @@ h1 {
   width: 100%;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .main-nav__link {
     color: var(--tertiary-color-gray);
     font-size: 1.6rem;
@@ -378,7 +378,7 @@ h1 {
   width: 100%;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .main-nav__btn {
     font-size: 1.6rem;
   }
@@ -388,7 +388,7 @@ h1 {
   padding: var(--padding-medium) 0;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .main-nav__primary {
     display: flex;
     justify-content: center;
@@ -401,7 +401,7 @@ h1 {
   border-top: 1px solid rgba(250, 250, 250, 0.1);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .main-nav__primary--cta {
     margin-left: auto;
   }
@@ -411,7 +411,7 @@ h1 {
   margin-top: var(--margin-medium);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .main-nav__list:not(:first-child) {
     margin-top: 0;
   }
@@ -433,7 +433,7 @@ h1 {
   transform: translateY(-50%);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .input-group {
     flex-direction: row;
     padding: var(--padding-large);
@@ -445,7 +445,7 @@ h1 {
   width: 90%;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .input-group__submit {
     flex: 1;
   }
@@ -460,7 +460,7 @@ h1 {
   margin-bottom: var(--margin-medium);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .input-group__input {
     margin-bottom: 0;
     margin-right: var(--margin-medium);
@@ -484,7 +484,7 @@ h1 {
   display: none;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .input-group__input--error {
     transform: translateY(0%) translateX(0%);
     position: absolute;
@@ -509,7 +509,7 @@ h1 {
   flex-direction: column;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .output-group__list {
     flex-direction: row;
     align-items: center;
@@ -529,7 +529,7 @@ h1 {
   padding: var(--padding-small) 1em;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .output-group__item:not(:first-child) {
     flex: 1;
   }
@@ -540,7 +540,7 @@ h1 {
   color: var(--primary-color-dark-violet);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .output-group__item:first-child {
     border-bottom: none;
     text-align: left;
@@ -553,7 +553,7 @@ h1 {
   font-size: 1.6rem;
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 50em) {
   .output-group__cta {
     margin-bottom: 0;
   }
