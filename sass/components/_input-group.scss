@@ -7,10 +7,20 @@
   align-items: center;
   padding: 2rem 0;
   border-radius: 0.5em;
+  @include respond(tab-land) {
+    flex-direction: row;
+    padding: var(--padding-large);
+    position: relative;
+  }
   transform: translateY(-50%);
   &__input,
   &__submit {
     width: 90%;
+  }
+  &__submit {
+    @include respond(tab-land) {
+      flex: 1;
+    }
   }
   &__input {
     padding: 0.6em 1em;
@@ -19,6 +29,10 @@
     font-size: 1.8rem;
     outline: none;
     margin-bottom: var(--margin-medium);
+    @include respond(tab-land) {
+      margin-bottom: 0;
+      margin-right: var(--margin-medium);
+    }
     &--not-valid {
       border: 4px solid var(--secondary-color-Red);
       &::placeholder {
@@ -32,6 +46,11 @@
       font-style: italic;
       transform: translateY(-80%) translateX(-85%);
       display: none;
+      @include respond(tab-land) {
+        transform: translateY(0%) translateX(0%);
+        position: absolute;
+        bottom: 10%;
+      }
     }
   }
 }

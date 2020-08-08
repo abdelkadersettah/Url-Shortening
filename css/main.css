@@ -202,7 +202,7 @@ h1 {
   padding: var(--padding-medium) var(--page-padding);
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 37.5em) {
   .features__statistic {
     margin-top: var(--margin-medium);
   }
@@ -210,6 +210,14 @@ h1 {
 
 .features__title {
   margin-bottom: calc(var(--margin-medium) * 4);
+}
+
+@media only screen and (min-width: 37.5em) {
+  .features__title {
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: calc(var(--margin-medium) * 4);
+  }
 }
 
 .boost {
@@ -425,8 +433,22 @@ h1 {
   transform: translateY(-50%);
 }
 
+@media only screen and (min-width: 56.25em) {
+  .input-group {
+    flex-direction: row;
+    padding: var(--padding-large);
+    position: relative;
+  }
+}
+
 .input-group__input, .input-group__submit {
   width: 90%;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .input-group__submit {
+    flex: 1;
+  }
 }
 
 .input-group__input {
@@ -436,6 +458,13 @@ h1 {
   font-size: 1.8rem;
   outline: none;
   margin-bottom: var(--margin-medium);
+}
+
+@media only screen and (min-width: 56.25em) {
+  .input-group__input {
+    margin-bottom: 0;
+    margin-right: var(--margin-medium);
+  }
 }
 
 .input-group__input--not-valid {
@@ -455,12 +484,20 @@ h1 {
   display: none;
 }
 
+@media only screen and (min-width: 56.25em) {
+  .input-group__input--error {
+    transform: translateY(0%) translateX(0%);
+    position: absolute;
+    bottom: 10%;
+  }
+}
+
 .output-group {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: calc(-0.9 * var(--margin-x-large));
+  margin-top: calc(-0.7 * var(--margin-x-large));
 }
 
 .output-group__list {
@@ -470,6 +507,14 @@ h1 {
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .output-group__list {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--padding-small);
+  }
 }
 
 .output-group__list:not(:first-child) {
@@ -484,15 +529,34 @@ h1 {
   padding: var(--padding-small) 1em;
 }
 
+@media only screen and (min-width: 56.25em) {
+  .output-group__item:not(:first-child) {
+    flex: 1;
+  }
+}
+
 .output-group__item:first-child {
   border-bottom: 1px solid var(--tertiary-color-gray);
   color: var(--primary-color-dark-violet);
+}
+
+@media only screen and (min-width: 56.25em) {
+  .output-group__item:first-child {
+    border-bottom: none;
+    text-align: left;
+  }
 }
 
 .output-group__cta {
   margin: 0 1em;
   margin-bottom: var(--margin-medium);
   font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .output-group__cta {
+    margin-bottom: 0;
+  }
 }
 
 .output-group__cta--copied {

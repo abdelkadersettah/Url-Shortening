@@ -62,12 +62,17 @@
   &__statistic {
     margin-top: var(--margin-x-large);
     padding: var(--padding-medium) var(--page-padding);
-    @include respond(tab-land) {
+    @include respond(tab-port) {
       margin-top: var(--margin-medium);
     }
   }
   &__title {
     margin-bottom: calc(var(--margin-medium) * 4);
+    @include respond(tab-port) {
+      max-width: 60%;
+      margin: 0 auto;
+      margin-bottom: calc(var(--margin-medium) * 4);
+    }
   }
 }
 .boost {
