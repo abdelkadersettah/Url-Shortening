@@ -3,18 +3,60 @@
   border-radius: 0.4em;
   padding: 2em 1.5em;
   position: relative;
+  @include respond(tab-land) {
+    text-align: left;
+    &:nth-child(1) {
+      transform: translateY(-10%);
+    }
+    &:nth-child(3) {
+      transform: translateY(10%);
+    }
+  }
   &:not(:last-child) {
     margin-bottom: 4em;
-    &::after {
+    @include respond(tab-land) {
+      margin-bottom: 0;
+      margin-right: var(--margin-medium);
+    }
+  }
+
+  &:nth-child(odd) {
+    z-index: 300;
+  }
+  &:nth-child(2) {
+    &::after,
+    &::before {
       content: '';
       display: block;
       width: 5px;
       height: 4em;
       background-color: var(--primary-color-cyan);
       position: absolute;
+      @include respond(tab-land) {
+        width: 4em;
+        height: 5px;
+        z-index: 20;
+      }
+    }
+    &::after {
       bottom: 0;
       left: 50%;
       transform: translateY(100%);
+      @include respond(tab-land) {
+        left: 100%;
+        right: 0;
+        top: 50%;
+      }
+    }
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateY(-100%);
+      @include respond(tab-land) {
+        top: 50%;
+        left: 0;
+        transform: translateY(0) translateX(-100%);
+      }
     }
   }
   &__figure {
@@ -25,6 +67,9 @@
     position: absolute;
     top: 0;
     transform: translateX(-50%) translateY(-50%);
+    @include respond(tab-land) {
+      transform: translateX(0%) translateY(-50%);
+    }
   }
   &__img {
     display: flex;
