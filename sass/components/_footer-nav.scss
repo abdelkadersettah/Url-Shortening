@@ -2,6 +2,7 @@
   @include respond(tab-land) {
     display: flex;
     text-align: left;
+    margin-left: var(--margin-medium);
   }
   &__list {
     margin-bottom: var(--margin-large);

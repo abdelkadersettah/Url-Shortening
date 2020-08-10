@@ -696,6 +696,7 @@ h1 {
   .footer-nav {
     display: flex;
     text-align: left;
+    margin-left: var(--margin-medium);
   }
 }
 
