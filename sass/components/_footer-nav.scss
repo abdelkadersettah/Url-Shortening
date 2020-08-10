@@ -1,6 +1,14 @@
 .footer-nav {
+  @include respond(tab-land) {
+    display: flex;
+    text-align: left;
+  }
   &__list {
     margin-bottom: var(--margin-large);
+    @include respond(tab-land) {
+      margin-bottom: 0;
+      margin-right: var(--margin-x-large);
+    }
   }
   &__item {
     margin-bottom: 0.3em;

@@ -256,6 +256,21 @@ h1 {
   margin-bottom: var(--margin-large);
 }
 
+@media only screen and (min-width: 50em) {
+  .footer__logo {
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 50em) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 .hamburger-btn {
   background: none;
   cursor: pointer;
@@ -677,8 +692,22 @@ h1 {
   margin-top: 1em;
 }
 
+@media only screen and (min-width: 50em) {
+  .footer-nav {
+    display: flex;
+    text-align: left;
+  }
+}
+
 .footer-nav__list {
   margin-bottom: var(--margin-large);
+}
+
+@media only screen and (min-width: 50em) {
+  .footer-nav__list {
+    margin-bottom: 0;
+    margin-right: var(--margin-x-large);
+  }
 }
 
 .footer-nav__item {

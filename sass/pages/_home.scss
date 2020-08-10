@@ -105,5 +105,14 @@
   padding: var(--padding-x-large) var(--page-padding);
   &__logo {
     margin-bottom: var(--margin-large);
+    @include respond(tab-land) {
+      margin-bottom: 0;
+      margin-right: auto;
+    }
+  }
+  @include respond(tab-land) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
