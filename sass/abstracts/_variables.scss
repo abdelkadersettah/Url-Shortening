@@ -26,7 +26,10 @@
     --page-padding: 5rem;
   }
   @include respond(desktop) {
-    --page-padding: 10vw;
+    --page-padding: calc(3vw + 7rem);
+  }
+  @include respond(big-desktop) {
+    --page-padding: calc(10vw + 7rem);
   }
   //margin
   --margin-small: 1rem;

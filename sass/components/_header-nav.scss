@@ -10,6 +10,8 @@
   top: 100%;
   display: none;
   @include respond(tab-land) {
+    width: 100%;
+    padding: 0;
     text-align: left;
     position: static;
     background-color: transparent;
@@ -45,9 +47,6 @@
     }
     &--cta {
       border-top: 1px solid rgba(250, 250, 250, 0.1);
-      @include respond(tab-land) {
-        justify-content: flex-end;
-      }
     }
   }
   &__list {
