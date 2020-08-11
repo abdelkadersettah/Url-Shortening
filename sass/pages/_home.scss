@@ -7,8 +7,14 @@
   @include respond(tab-land) {
     padding: 0 var(--page-padding);
   }
+  @include respond(desktop) {
+    justify-content: unset;
+  }
 
   &__logo {
+    @include respond(tab-land) {
+      margin-right: var(--margin-medium);
+    }
     &--img {
       vertical-align: middle;
     }
