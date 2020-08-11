@@ -3,6 +3,9 @@
   line-height: 1.2;
   color: var(--tertiary-color-very-dark-blue);
   margin-bottom: var(--margin-small);
+  @include respond(desktop) {
+    font-size: 5rem;
+  }
 }
 .text-primary {
   font-weight: 500;

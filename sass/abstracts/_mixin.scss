@@ -27,8 +27,8 @@ $breakpoint argument choices:
     }
   }
   @if $breakpoint == desktop {
-    @media only screen and (min-width: 75em) {
-      //1200px
+    @media only screen and (min-width: 62.5em) {
+      //1000px
       @content;
     }
   }
