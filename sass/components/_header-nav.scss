@@ -24,8 +24,8 @@
       font-size: 1.6rem;
       transition: all 0.2s;
       &:hover {
-        color: var(--tertiary-color-very-dark-violet);
         font-weight: 700;
+        color: var(--tertiary-color-very-dark-violet);
       }
     }
   }
@@ -58,7 +58,7 @@
       }
     }
     &:not(:last-child) {
-      margin-right: var(--margin-medium);
+      margin-right: var(--margin-large);
     }
   }
 }
