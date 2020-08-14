@@ -12,13 +12,13 @@ URL-shortening is landing page designed by frontendmentor and coded by [abdelkad
 ## Overview
 
 we use Sass to style this landing page and javascript to integrate with the [rel.ink](https://rel.ink) API and get it.
-check out this landing page at [Url-Shortening](https://github.com/setaek/Url-Shortening/)
+check out this landing page at [Url-Shortening](https://setaek.github.io/Url-Shortening/)
 
 ## Quick start
 
 Several quick start options are available:
 
-- Clone the repo: `git clone https://github.com/setaek/Url-Shortening/` also a `style-guide.md` file, which contains the information you'll need, such as color palette and fonts...
+- Clone the repo: `git clone https://github.com/setaek/Url-Shortening.git` also a `style-guide.md` file, which contains the information you'll need, such as color palette and fonts...
 
 ## What's included
 
