@@ -109,23 +109,25 @@ function renderShortLink(data) {
 
 // copy the clicked short link
 function copyLink() {
-  const copyBtn = document.querySelector('.output-group__cta');
-  copyBtn.addEventListener('click', (e) => {
-    copyBtn.classList.toggle('output-group__cta--copied');
-    copyBtn.textContent = 'Copied!';
+  const copyBtn = document.querySelectorAll('.output-group__cta');
+  copyBtn.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      btn.classList.toggle('output-group__cta--copied');
+      btn.textContent = 'Copied!';
 
-    // create select range
-    var range = document.createRange();
-    // link that got copy
-    var linkClicked = copyBtn.previousElementSibling;
-    // select url clicked
-    range.selectNodeContents(linkClicked);
-    // get selection
-    var sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
-    document.execCommand('copy');
-    // remove selection
-    sel.removeAllRanges();
+      // create select range
+      var range = document.createRange();
+      // link that got copy
+      var linkClicked = btn.previousElementSibling;
+      // select url clicked
+      range.selectNodeContents(linkClicked);
+      // get selection
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      document.execCommand('copy');
+      // remove selection
+      sel.removeAllRanges();
+    });
   });
 }
