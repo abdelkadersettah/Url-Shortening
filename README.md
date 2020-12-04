@@ -1,6 +1,6 @@
 # URL Shortening
 
-URL-shortening is landing page designed by frontendmentor and coded by [abdelkader settah](https://github.com/setaek), URL-Shortening is app that can short any valid link.
+URL-shortening is landing page designed by frontendmentor and coded by [abdelkader settah](https://github.com/abdelkadersettah), URL-Shortening is app that can short any valid link.
 
 ## Table of Contents
 
@@ -12,13 +12,13 @@ URL-shortening is landing page designed by frontendmentor and coded by [abdelkad
 ## Overview
 
 we use Sass to style this landing page and javascript to integrate with the [rel.ink](https://rel.ink) API and get it.
-check out this landing page at [Url-Shortening](https://setaek.github.io/Url-Shortening/)
+check out this landing page at [Url-Shortening](https://abdelkadersettah.github.io/Url-Shortening/)
 
 ## Quick start
 
 Several quick start options are available:
 
-- Clone the repo: `git clone https://github.com/setaek/Url-Shortening.git` also a `style-guide.md` file, which contains the information you'll need, such as color palette and fonts...
+- Clone the repo: `git clone https://github.com/abdelkadersettah/Url-Shortening.git` also a `style-guide.md` file, which contains the information you'll need, such as color palette and fonts...
 
 ## What's included
 
@@ -60,4 +60,4 @@ URL-SHORTENING/
 
 ## Copyright
 
-Copyright (c) 2020 design a credit to the original author frontendmentor coded by [abdelkader settah](https://github.com/setaek)
+Copyright (c) 2020 design a credit to the original author frontendmentor coded by [abdelkader settah](https://github.com/abdelkadersettah)
