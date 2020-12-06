@@ -30,7 +30,7 @@ document.addEventListener('click', (e) => {
 
 // add class to input if the user don't write the url
 const inputBtn = document.querySelector('.input-group__submit');
-inputBtn.addEventListener('click', (e) => {
+inputBtn.addEventListener('click', async (e) => {
   e.preventDefault();
   const input = document.querySelector('.input-group__input');
   const errorMsg = document.querySelector('.input-group__input--error');
@@ -40,71 +40,39 @@ inputBtn.addEventListener('click', (e) => {
   } else {
     input.classList.remove('input-group__input--not-valid');
     errorMsg.style.display = 'none';
-    const shortenLink = fetchNewLink(input.value);
-    shortenLink.then((data) => {
-      renderShortLink(data);
-      copyLink();
-    });
+    const shortenLink = await fetchNewLink(input.value);
+    renderShortLink(shortenLink);
+    copyLink();
+
     input.value = '';
   }
 });
 
-//get shorten link
-
-//  XMLHttpRequest method
-// function postRequest() {
-//   return new Promise((resolve, reject) => {
-//     var http = new XMLHttpRequest();
-//     var url = 'https://rel.ink/api/links/';
-//     var params = {
-//       url: 'https://www.google.com/',
-//     };
-
-//     http.open('POST', url);
-
-//     //Send the proper header information along with the request
-//     http.setRequestHeader('Content-type', 'application/json');
-
-//     http.onload = function () {
-//       //Call a function when the state changes.
-//       if (http.readyState === 4) {
-//         resolve(JSON.parse(http.responseText));
-//       } else {
-//         reject(Error, 'cant get data');
-//       }
-//     };
-//     http.send(JSON.stringify(params));
-//   })
-//     .then((data) => console.log(data))
-//     .catch((err) => console.log(err));
-// }
-// postRequest();
-
-function postLink(input) {
-  return fetch('https://rel.ink/api/links/', {
+// fetch shortet link
+let postLink = (url) => {
+  return fetch(`https://api.shrtco.de/v2/shorten?url=${url}`, {
     method: 'POST',
-    body: JSON.stringify({
-      url: input,
-    }),
-    headers: {
-      'Content-type': 'application/json',
-    },
-  }).then((response) => response.json());
-}
+    body: JSON.stringify(),
+  });
+};
 
 async function fetchNewLink(url) {
-  let newLinkJson = await postLink(url);
-  return newLinkJson;
+  let newLinkResponse = await postLink(url);
+  let response = await newLinkResponse.json();
+  let linkResult = await response.result;
+
+  return { code: linkResult.code, shortLink: linkResult.full_short_link };
 }
 function renderShortLink(data) {
   const outputGroup = document.querySelector('.output-group');
-  outputGroup.innerHTML += `
+  const markup = `
   <ul class="output-group__list">
-      <li class="output-group__item">${data.url}</li>
-      <li class="output-group__item">https://rel.ink/${data.hashid}</li>
+      <li class="output-group__item">${data.code}</li>
+      <li class="output-group__item">${data.shortLink}</li>
       <li class="output-group__cta btn btn--secondary">copy</li>
   </ul> 
     `;
+  outputGroup.insertAdjacentHTML('afterbegin', markup);
 }
 
 // copy the clicked short link
